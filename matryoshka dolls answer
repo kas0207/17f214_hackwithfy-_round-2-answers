@@ -1,0 +1,13 @@
+for _ in range(int(input())):
+	l=int(input())
+	a=list(map(int,input().split()))
+	a.sort()
+	k=0
+	for i in range(l-1):
+		if a[i]==a[i+1]:
+			k=1
+			break
+	if k==1:
+		print("NO")
+	else:
+		print("YES")
