@@ -1,0 +1,37 @@
+You are given N blocks consisting of integers. The blocks are one-dimensional arrays. You want to put them all in the box of length
+M in such a way that they do not overlap. To do this work, you are
+allowed to remove any number of leftmost or rightmost elements in
+some blocks. You can also remove a block completely or cannot remove
+anything at all.
+What is the maximum sum of elements that you can put in the box?
+Note: You cannot leave some free space in the box.
+
+Input Format
+The first line of input contains two integers N and M denoting the number of blocks and length of the box respectively.
+The next N lines describe the blocks. The first number in the i-th of these lines is len, denoting the length of the i-th block. Then, len-i integers follow denoting the elements of the i-th block.
+
+Output Format
+Print the maximum sum of elements that you can put in the box.
+
+Constraints
+1 <= N <= 100
+1 <= M <= 1000
+-10^9 <= elements of the block <= 10^9
+0 <= sum of overall len-i <= 10^5
+
+Sample Input
+3 4
+3 2 3 5
+2 7 -1
+2 8 10
+
+Sample Output
+30
+
+Explanation
+Sonya has three blocks: {2, 3, 5}, {7, -1}, {8, 10} and a box of length 4. The best strategy is:
+delete two leftmost elements in the 1-st block {2, 3, 5} => {5}
+delete the rightmost element in the 2-nd block {7, -1} => {7}
+Now the blocks look like: {5}, {7}, {8, 10}, and Sonya can put them all in the box. The sum of elements in the box is 30.
+
+I was trying dynamic programming approach but were not able to complete the solution. If anyone able to solve it, please share it here.
